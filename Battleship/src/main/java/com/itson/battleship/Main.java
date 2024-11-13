@@ -4,6 +4,9 @@
  */
 package com.itson.battleship;
 
+import modelo.Barco;
+import modelo.iNave;
+
 /**
  *
  * @author Yeisi
@@ -15,6 +18,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        iNave barco=new Barco();
+        
     }
     
 }
