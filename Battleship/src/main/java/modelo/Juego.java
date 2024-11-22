@@ -29,13 +29,13 @@ public class Juego {
     //Metodos
     public void iniciarJuego(Juego juego){
         // Bucle principal del juego
-        while (!haTerminadoElJuego()) {
-            // El jugador actual realiza su turno
-            turnoJugador.realizarJugada();
-
-            // Cambiamos al siguiente jugador
-            turnoJugador = turnoJugador == jugador1 ? jugador2 : jugador1;
-        }
+//        while (!haTerminadoElJuego()) {
+//            // El jugador actual realiza su turno
+//            turnoJugador.realizarJugada();
+//
+//            // Cambiamos al siguiente jugador
+//            turnoJugador = turnoJugador == jugador1 ? jugador2 : jugador1;
+//        }
         
     }
     
