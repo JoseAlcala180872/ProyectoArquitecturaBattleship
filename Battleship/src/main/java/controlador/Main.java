@@ -16,7 +16,8 @@ import vista.frmInicial;
  */
 public class Main {
     public static void main(String[] args) {
-        FrmInicialController.mostrar();
+          iFrmInicial inicio=new FrmInicialController();
+          inicio.mostrar();
         Tablero tablero=new Tablero();
         
         for (int i = 0; i < tablero.getNaves().size(); i++) {

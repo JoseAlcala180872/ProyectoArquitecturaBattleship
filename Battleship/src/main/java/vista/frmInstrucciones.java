@@ -4,7 +4,13 @@
  */
 package vista;
 
+import controlador.FrmInicialController;
+import controlador.FrmInstruccionesController;
+import controlador.FrmPosicionarFlotaController;
 import controlador.JugadorController;
+import controlador.iFrmInicial;
+import controlador.iFrmInstrucciones;
+import controlador.iFrmPosicionarFlota;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,10 +21,10 @@ public class frmInstrucciones extends javax.swing.JFrame {
 
     /**
      * Creates new form frmInstrucciones
-     */
-    private JugadorController jugadorController = new JugadorController();
-    private frmPosicionarFlota frmPosicionarFlota = new frmPosicionarFlota();
-
+     */    
+    iFrmInicial iInicio=new FrmInicialController();
+    iFrmInstrucciones iInstrucciones=new FrmInstruccionesController();
+    iFrmPosicionarFlota iPosicionarFlota=new FrmPosicionarFlotaController();
     public frmInstrucciones() {
         initComponents();
     }
@@ -116,8 +122,8 @@ public class frmInstrucciones extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        controlador.FrmInstruccionesController.ocultar();
-        controlador.FrmInicialController.mostrar();
+        iInstrucciones.ocultar();
+        iInicio.mostrar();
     }//GEN-LAST:event_btnRegresarActionPerformed
 
     private void btnJugarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarPartidaActionPerformed
@@ -127,11 +133,10 @@ public class frmInstrucciones extends javax.swing.JFrame {
             
 
         } else {
-            jugadorController.crearJugador(nombre);
-            this.setVisible(false);
-            frmPosicionarFlota.setVisible(true);
-            frmPosicionarFlota.dibujarTablero();
-
+            iInstrucciones.crearJugador(nombre);            
+            iInstrucciones.ocultar(); 
+            iPosicionarFlota.mostrar();
+            iPosicionarFlota.dibujarTablero();            
         }
     }//GEN-LAST:event_btnJugarPartidaActionPerformed
 

@@ -18,7 +18,7 @@
     <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="1"/>
   </AuxValues>
 
   <Layout>
@@ -27,9 +27,18 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="pTableroPrincipal" min="-2" pref="467" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnListo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnListo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnPortaAviones" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
@@ -44,7 +53,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-              <Component id="pTableroPrincipal" min="-2" pref="429" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="pTableroPrincipal" min="-2" pref="429" max="-2" attributes="0"/>
+                  <Component id="btnPortaAviones" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="95" max="32767" attributes="0"/>
               <Component id="btnListo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
@@ -78,5 +90,13 @@
         <Property name="rows" type="int" value="10"/>
       </Layout>
     </Container>
+    <Component class="javax.swing.JButton" name="btnPortaAviones">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Porta Aviones"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPortaAvionesActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

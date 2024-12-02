@@ -12,17 +12,21 @@ import vista.frmInicial;
  *
  * @author Yeisi
  */
-public class FrmInicialController{
+public class FrmInicialController implements iFrmInicial{
     public static frmInicial inicio= new frmInicial();
     
-    
-    public static void mostrar(){
+    @Override
+    public void mostrar() {
         inicio.setVisible(true);
     }
-    
-    public static void ocultar(){
+
+    @Override
+    public void ocultar() {
         inicio.setVisible(false);
     }
+    
+    
+    
     
     
     

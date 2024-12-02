@@ -4,6 +4,11 @@
  */
 package vista;
 
+import controlador.FrmInicialController;
+import controlador.FrmInstruccionesController;
+import controlador.iFrmInicial;
+import controlador.iFrmInstrucciones;
+
 /**
  *
  * @author Yeisi
@@ -13,6 +18,10 @@ public class frmInicial extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
+    iFrmInicial iInicio=new FrmInicialController();
+    iFrmInstrucciones iInstrucciones=new FrmInstruccionesController();
+    
+    
     public frmInicial() {
         initComponents();
     }
@@ -76,8 +85,8 @@ public class frmInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnJugarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarPartidaActionPerformed
-        controlador.FrmInicialController.ocultar();
-        controlador.FrmInstruccionesController.mostrar();
+        iInicio.ocultar();        
+        iInstrucciones.mostrar();        
     }//GEN-LAST:event_btnJugarPartidaActionPerformed
 
     /**

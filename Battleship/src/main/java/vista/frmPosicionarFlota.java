@@ -4,6 +4,8 @@
  */
 package vista;
 
+import controlador.FrmPosicionarFlotaController;
+import controlador.iFrmPosicionarFlota;
 import java.awt.Color;
 import javax.swing.JButton;
 
@@ -16,6 +18,7 @@ public class frmPosicionarFlota extends javax.swing.JFrame {
     /**
      * Creates new form frmPosicionarFlota
      */
+    iFrmPosicionarFlota iFrmPosicionarFlota= new FrmPosicionarFlotaController();
     public static JButton pb[][] = new JButton[10][10];
     public static char eb[][] = new char[10][10];
 
@@ -49,6 +52,7 @@ public class frmPosicionarFlota extends javax.swing.JFrame {
         btnListo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         pTableroPrincipal = new javax.swing.JPanel();
+        btnPortaAviones = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Posicionar flota");
@@ -65,6 +69,13 @@ public class frmPosicionarFlota extends javax.swing.JFrame {
         pTableroPrincipal.setMinimumSize(new java.awt.Dimension(300, 300));
         pTableroPrincipal.setLayout(new java.awt.GridLayout(10, 10));
 
+        btnPortaAviones.setText("Porta Aviones");
+        btnPortaAviones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPortaAvionesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -72,9 +83,15 @@ public class frmPosicionarFlota extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(pTableroPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnListo)
-                .addGap(37, 37, 37))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnListo)
+                        .addGap(37, 37, 37))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btnPortaAviones)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(212, 212, 212)
                 .addComponent(jLabel1)
@@ -86,7 +103,9 @@ public class frmPosicionarFlota extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(2, 2, 2)
-                .addComponent(pTableroPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pTableroPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPortaAviones))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addComponent(btnListo)
                 .addGap(36, 36, 36))
@@ -99,6 +118,10 @@ public class frmPosicionarFlota extends javax.swing.JFrame {
     private void btnListoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnListoActionPerformed
+
+    private void btnPortaAvionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPortaAvionesActionPerformed
+        iFrmPosicionarFlota.crearPortaAviones();
+    }//GEN-LAST:event_btnPortaAvionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,8 +159,9 @@ public class frmPosicionarFlota extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnListo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel pTableroPrincipal;
+    public javax.swing.JButton btnListo;
+    public javax.swing.JButton btnPortaAviones;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JPanel pTableroPrincipal;
     // End of variables declaration//GEN-END:variables
 }

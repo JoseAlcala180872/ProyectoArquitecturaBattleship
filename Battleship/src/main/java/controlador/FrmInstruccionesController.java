@@ -4,23 +4,28 @@
  */
 package controlador;
 
+import modelo.Jugador;
 import vista.frmInstrucciones;
 
 /**
  *
  * @author Yeisi
  */
-public class FrmInstruccionesController {
-    public static frmInstrucciones inicio= new frmInstrucciones();
-    
-    public static void mostrar(){
-        inicio.setVisible(true);
+public class FrmInstruccionesController implements iFrmInstrucciones{
+    public static frmInstrucciones instrucciones= new frmInstrucciones();
+
+    @Override
+    public void mostrar() {
+        instrucciones.setVisible(true);
     }
+
+    @Override
+    public void ocultar() {
+        instrucciones.setVisible(false);
+    }    
     
-    public static void ocultar(){
-        inicio.setVisible(false);
+    public Jugador crearJugador(String nombre){        
+        return new Jugador(nombre);
+        
     }
-    
-    
-    
 }
